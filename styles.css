@@ -1,0 +1,3175 @@
+/* =========================================================
+   FONTS
+   ========================================================= */
+
+@font-face {
+  font-family: 'Alte Bold';
+  src: url('fonts/AlteHaasGroteskBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Alte';
+  src: url('fonts/AlteHaasGroteskRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Matcha';
+  src: url('fonts/Matcha Cih.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('fonts/quicksand_book.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Quicksand Bold';
+  src: url('fonts/quicksand_bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Quicksand Light';
+  src: url('fonts/quicksand_light.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Warm';
+  src: url('fonts/Super Warming.ttf') format('truetype');
+}
+
+
+/* =========================================================
+   GENERAL PAGE STYLES
+   ========================================================= */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF5EB;
+}
+
+
+/* =========================================================
+   HERO HEADER
+   ========================================================= */
+
+.hero-header {
+  width: 100%;
+  aspect-ratio: 2048 / 379;
+
+  background-image: url('images/header.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  box-sizing: border-box;
+
+  color: black;
+}
+
+.hero-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+
+  max-width: 500px;
+
+  text-align: right;
+}
+
+.hero-content h1 {
+  margin: 0 0 10px;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: 3px;
+}
+
+.hero-content p {
+  margin: 0;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  padding: 10px 20px;
+
+  box-sizing: border-box;
+
+  background-color: #5AD7F8;
+  border: 2px solid white;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+   ========================================================= */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.nav-links li:not(:last-child)::after {
+  content: "|";
+  margin-left: 15px;
+  color: white;
+}
+
+.nav-links a {
+  display: inline-block;
+
+  padding: 8px 18px;
+
+  background-color: #FFF5EB;
+  color: black;
+
+  border-radius: 6px;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #FF009D;
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   NAVIGATION ADDRESS
+   ========================================================= */
+
+.nav-address {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 1;
+
+  text-align: right;
+
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1rem;
+  line-height: 1.25;
+  letter-spacing: 0.3px;
+}
+
+.nav-address span {
+  display: block;
+}
+
+
+/* =========================================================
+   HAMBURGER
+   ========================================================= */
+
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+
+  color: white;
+  font-size: 28px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   NAVIGATION CTA
+   ========================================================= */
+
+.nav-cta {
+  padding: 8px 18px;
+
+  background-color: #eeb868;
+  color: black;
+
+  border: none;
+  border-radius: 6px;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.nav-cta:hover {
+  background-color: #176360;
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+main {
+  position: relative;
+  width: 100%;
+}
+
+
+/* =========================================================
+   MAIN PAGE LOGO
+   ========================================================= */
+
+main .main-logo {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 220px;
+  height: 220px;
+
+  background-color: black;
+  border: 4px solid white;
+  border-radius: 50%;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+main .main-logo img {
+  display: block;
+
+  width: 80%;
+  height: 80%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   FEATURED TREATS
+   ========================================================= */
+
+.featured-section {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+  padding: 90px 80px 80px 280px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   FEATURED HEADING
+   ========================================================= */
+
+.featured-heading {
+  width: 100%;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.featured-heading h2 {
+  margin: 0 0 12px;
+
+  color: black;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.featured-heading p {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   FEATURED TREAT CARDS
+   ========================================================= */
+
+.featured-treats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  width: 100%;
+  max-width: 1320px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   TREAT IMAGE
+   ========================================================= */
+
+.treat-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  background-color: #FFF5EB;
+  border: 3px solid white;
+}
+
+.treat-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   TREAT INFORMATION
+   ========================================================= */
+
+.treat-info {
+  padding: 15px 10px 5px;
+}
+
+.treat-info h3 {
+  margin: 0 0 7px;
+
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.treat-info p {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FEATURED MENU BUTTON
+   ========================================================= */
+
+.featured-button {
+  display: inline-block;
+
+  margin-top: 40px;
+  padding: 10px 24px;
+
+  background-color: #5AD7F8;
+  color: black;
+
+  border-radius: 6px;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 18px;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.featured-button:hover {
+  background-color: #FF009D;
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   INTRODUCTION SECTION
+   ========================================================= */
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 70px 60px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   INTRODUCTION IMAGE
+   ========================================================= */
+
+.intro-image {
+  width: 48%;
+  flex-shrink: 0;
+}
+
+.intro-image img {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 1320 / 1306;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+
+/* =========================================================
+   INTRODUCTION CONTENT
+   ========================================================= */
+
+.intro-content {
+  flex: 1;
+
+  text-align: left;
+  color: black;
+}
+
+.intro-content h1 {
+  margin: 0 0 20px;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.05;
+  letter-spacing: 1px;
+}
+
+.intro-content p {
+  margin: 0 0 18px;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   INTRODUCTION BUTTON
+   ========================================================= */
+
+.intro-button {
+  display: inline-block;
+
+  margin-top: 10px;
+  padding: 10px 22px;
+
+  background-color: #5AD7F8;
+  color: black;
+
+  border-radius: 6px;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 18px;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.intro-button:hover {
+  background-color: #FF009D;
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   CATERING SECTION
+   ========================================================= */
+
+.catering-section {
+  background-color: transparent;
+}
+
+.catering-section .intro-content {
+  order: 1;
+}
+
+.catering-section .intro-image {
+  order: 2;
+}
+
+
+/* =========================================================
+   MENU PAGE
+   ========================================================= */
+
+.menu-page {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+  padding: 80px 60px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MENU SIDEBAR
+   ========================================================= */
+
+.menu-sidebar {
+  position: sticky;
+  top: 100px;
+
+  width: 220px;
+  flex-shrink: 0;
+
+  padding: 25px;
+
+  box-sizing: border-box;
+
+  background-color: #5AD7F8;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+.menu-sidebar h2 {
+  margin: 0 0 20px;
+
+  color: black;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   MENU CATEGORY NAVIGATION
+   ========================================================= */
+
+.menu-category-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-category-nav a {
+  display: block;
+
+  padding: 10px 12px;
+
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 16px;
+  line-height: 1.3;
+
+  text-decoration: none;
+  border-radius: 5px;
+
+  transition: 0.3s ease;
+}
+
+.menu-category-nav a:hover {
+  background-color: #FF009D;
+  color: white;
+  transform: translateX(4px);
+}
+
+
+/* =========================================================
+   MENU CONTENT
+   ========================================================= */
+
+.menu-content {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   MENU SECTIONS
+   ========================================================= */
+
+.menu-section {
+  scroll-margin-top: 110px;
+  padding: 10px 0 90px;
+}
+
+.menu-section:not(:first-child) {
+  padding-top: 70px;
+  border-top: 2px solid white;
+}
+
+
+/* =========================================================
+   MENU SECTION HEADING
+   ========================================================= */
+
+.menu-section-heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.menu-section-heading h1,
+.menu-section-heading h2 {
+  margin: 0 0 12px;
+
+  color: black;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.menu-section-heading p {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   NEW ITEM LINKS
+   ========================================================= */
+
+.menu-item-link {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.menu-item-link h3 {
+  margin: 15px 0 0;
+
+  color: #FF009D;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.2;
+
+  text-align: center;
+  text-decoration: none;
+}
+
+.menu-item-link:hover {
+  transform: scale(1.03);
+}
+
+.menu-item-link:hover h3 {
+  color: #FF009D;
+  text-decoration: none;
+}
+
+.menu-item-link .menu-item-image {
+  transition: border-color 0.3s ease;
+}
+
+.menu-item-link:hover .menu-item-image {
+  border-color: #FF009D;
+}
+
+
+/* =========================================================
+   MENU ITEM GRID
+   ========================================================= */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+
+/* =========================================================
+   MENU ITEM
+   ========================================================= */
+
+.menu-item {
+  text-align: center;
+}
+
+.menu-item-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  padding: 8px;
+
+  box-sizing: border-box;
+
+  background-color: #FFF5EB;
+  border: 3px solid white;
+
+  overflow: hidden;
+}
+
+.menu-item-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.3s ease;
+}
+
+.menu-item:hover img {
+  transform: scale(1.03);
+}
+
+.menu-item h3 {
+  margin: 15px 0 0;
+
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   DESSERT CATERING PACKAGES
+   ========================================================= */
+
+.catering-packages {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+  padding: 90px 70px 100px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CATERING HEADING
+   ========================================================= */
+
+.catering-heading {
+  max-width: 850px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.catering-heading h1 {
+  margin: 0 0 15px;
+
+  color: black;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 4rem;
+  line-height: 1.05;
+  letter-spacing: 1px;
+}
+
+.catering-heading p {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   BOOKING CTA
+   ========================================================= */
+
+.booking-cta {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.booking-cta a {
+  display: block;
+
+  width: 100%;
+
+  padding: 18px 30px;
+
+  box-sizing: border-box;
+
+  background-color: #FF009D;
+  color: white;
+
+  border: 4px solid white;
+  border-radius: 8px;
+
+  text-align: center;
+  text-decoration: none;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.4rem;
+
+  transition: 0.25s ease;
+}
+
+.booking-cta a:hover {
+  background-color: #5BD6F8;
+  color: black;
+  transform: translateY(-3px);
+}
+
+.booking-cta-top {
+  margin: 40px 0 30px;
+}
+
+.booking-cta-bottom {
+  margin: 50px 0 60px;
+}
+
+
+/* =========================================================
+   PACKAGE GRID
+   ========================================================= */
+
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   PACKAGE CARD
+   ========================================================= */
+
+.package-card {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #FFF5EB;
+
+  border: 3px solid white;
+  border-radius: 8px;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  transition: 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   PACKAGE LABEL
+   ========================================================= */
+
+.package-label {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 4087 / 1551;
+
+  object-fit: cover;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PACKAGE CONTENT
+   ========================================================= */
+
+.package-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 25px 28px 35px;
+
+  box-sizing: border-box;
+}
+
+.package-content h2 {
+  margin: 0 0 12px;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+
+  text-align: center;
+}
+
+.package-content > p {
+  margin: 0 0 20px;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   PACKAGE ITEMS
+   ========================================================= */
+
+.package-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.package-items li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.package-items li img {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   PACKAGE HEADING COLORS
+   ========================================================= */
+
+.package-1-title {
+  color: #D5024F !important;
+}
+
+.package-2-title {
+  color: #F27509 !important;
+}
+
+.package-3-title {
+  color: #52850E !important;
+}
+
+.package-4-title {
+  color: #5BD6F8 !important;
+}
+
+.package-5-title {
+  color: #49147E !important;
+}
+
+.package-6-title {
+  color: #FECD06 !important;
+}
+
+
+/* =========================================================
+   PACKAGE BUTTON
+   ========================================================= */
+
+.package-button {
+  display: inline-block;
+
+  margin-top: auto;
+  padding-top: 25px;
+
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 16px;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.package-button:hover {
+  color: #FF009D;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SPECIALTY PACKAGES
+   ========================================================= */
+
+.specialty-packages {
+  padding: 80px 5%;
+
+  background-color: #FFF5EB;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SPECIALTY HEADING
+   ========================================================= */
+
+.specialty-heading {
+  max-width: 750px;
+
+  margin: 0 auto 50px;
+
+  text-align: center;
+}
+
+.specialty-heading h2 {
+  margin: 0 0 15px;
+
+  color: #FF009D;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.specialty-heading p {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   SPECIALTY GRID
+   ========================================================= */
+
+.specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SPECIALTY CARD
+   ========================================================= */
+
+.specialty-card {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  min-width: 0;
+
+  background-color: white;
+
+  border: 3px solid white;
+  border-radius: 10px;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+
+  transition: transform 0.3s ease;
+}
+
+.specialty-card:hover {
+  transform: translateY(-6px);
+}
+
+
+/* =========================================================
+   SPECIALTY IMAGE
+   ========================================================= */
+
+.specialty-image {
+  display: block;
+
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   SPECIALTY CONTENT
+   ========================================================= */
+
+.specialty-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  padding: 25px;
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+.specialty-content h3 {
+  margin: 0 0 12px;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 2rem;
+  line-height: 1.1;
+}
+
+.specialty-content p {
+  margin: 0 0 25px;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SPECIALTY TITLE COLORS
+   ========================================================= */
+
+.branded-title {
+  color: #D5024F;
+}
+
+.slime-title {
+  color: #52850E;
+}
+
+.bear-title {
+  color: #49147E;
+}
+
+
+/* =========================================================
+   SPECIALTY BUTTON
+   ========================================================= */
+
+.specialty-button {
+  display: inline-block;
+
+  margin-top: auto;
+  padding: 10px 20px;
+
+  background-color: #5AD7F8;
+  color: black;
+
+  border: 2px solid white;
+  border-radius: 6px;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1rem;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.specialty-button:hover {
+  background-color: #FF009D;
+  color: white;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   SPECIALTY EXPANDABLE DETAILS
+   ========================================================= */
+
+.specialty-toggle {
+  display: none;
+}
+
+.specialty-more {
+  max-height: 0;
+
+  overflow: hidden;
+  opacity: 0;
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    margin-top 0.3s ease;
+}
+
+.specialty-toggle:checked ~ .specialty-more {
+  max-height: 500px;
+
+  margin-top: 15px;
+
+  opacity: 1;
+}
+
+.specialty-more p {
+  margin: 0;
+  padding-top: 15px;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   BRANDED PACKAGE DETAILS
+   ========================================================= */
+
+.branded-more {
+  text-align: left;
+}
+
+.branded-more h4 {
+  margin: 0 0 20px;
+
+  color: #D5024F;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   BRANDED PACKAGE OPTIONS
+   ========================================================= */
+
+.branded-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  padding: 12px 0;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.branded-option-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  min-width: 0;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.branded-bullet {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  background-color: #D5024F;
+
+  border-radius: 50%;
+}
+
+.branded-price {
+  flex-shrink: 0;
+
+  color: #D5024F;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   SLIME PACKAGE DETAILS
+   ========================================================= */
+
+.slime-more {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  text-align: left;
+}
+
+.slime-package-option {
+  width: 100%;
+
+  padding: 15px 0;
+
+  box-sizing: border-box;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.slime-package-option:first-child {
+  padding-top: 5px;
+  border-top: none;
+}
+
+.slime-option-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+}
+
+.slime-option-heading h4 {
+  min-width: 0;
+
+  margin: 0;
+
+  color: #52850E;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.slime-price {
+  flex-shrink: 0;
+
+  color: #52850E;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.1rem;
+}
+
+.slime-items {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  list-style: none;
+}
+
+.slime-items li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.slime-bullet {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  background-color: #52850E;
+
+  border-radius: 50%;
+}
+
+
+/* =========================================================
+   ADOPT-A-BEAR PACKAGE DETAILS
+   ========================================================= */
+
+.bear-more {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  text-align: left;
+}
+
+.bear-package-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+
+  width: 100%;
+
+  margin-bottom: 15px;
+
+  box-sizing: border-box;
+}
+
+.bear-package-heading h4 {
+  margin: 0;
+
+  color: #49147E;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.3;
+}
+
+.bear-price {
+  flex-shrink: 0;
+
+  color: #49147E;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.1rem;
+}
+
+.bear-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  list-style: none;
+}
+
+.bear-items > li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.bear-bullet {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  margin-top: 6px;
+
+  background-color: #49147E;
+
+  border-radius: 50%;
+}
+
+.bear-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.bear-subitems {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin: 10px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.bear-subitems li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.bear-subitems li img {
+  width: 24px;
+  height: 24px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   PACKAGE BUNDLES
+   ========================================================= */
+
+.package-bundles {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+  padding: 20px 5% 100px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PACKAGE BUNDLE HEADING
+   ========================================================= */
+
+.bundle-heading {
+  max-width: 750px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+.bundle-heading h2 {
+  margin: 0 0 12px;
+
+  color: black;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.bundle-heading p {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   PACKAGE BUNDLE GRID
+   ========================================================= */
+
+.bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PACKAGE BUNDLE CARD
+   ========================================================= */
+
+.bundle-card {
+  padding: 20px;
+
+  background-color: white;
+
+  border: 3px solid white;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+}
+
+.bundle-card:hover {
+  transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   BUNDLE TITLE + PRICE
+   ========================================================= */
+
+.bundle-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+
+  margin-bottom: 10px;
+}
+
+.bundle-title-row h3 {
+  margin: 0;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.bundle-price {
+  flex-shrink: 0;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   BUNDLE DESCRIPTION
+   ========================================================= */
+
+.bundle-card p {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   BUNDLE COLORS
+   ========================================================= */
+
+.bundle-1 {
+  border-top-color: #D5024F;
+}
+
+.bundle-1 h3,
+.bundle-1 .bundle-price {
+  color: #D5024F;
+}
+
+.bundle-2 {
+  border-top-color: #F27509;
+}
+
+.bundle-2 h3,
+.bundle-2 .bundle-price {
+  color: #F27509;
+}
+
+.bundle-3 {
+  border-top-color: #52850E;
+}
+
+.bundle-3 h3,
+.bundle-3 .bundle-price {
+  color: #52850E;
+}
+
+.bundle-4 {
+  border-top-color: #5BD6F8;
+}
+
+.bundle-4 h3,
+.bundle-4 .bundle-price {
+  color: #5BD6F8;
+}
+
+.custom-branding {
+  grid-column: 1 / -1;
+
+  min-height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px 30px;
+
+  text-align: center;
+}
+
+.custom-branding p {
+  margin: 0;
+
+  color: #49147E;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+/* =========================================================
+   BOOKING PAGE
+   ========================================================= */
+
+.booking-page {
+  width: 100%;
+  max-width: 1500px;
+
+  margin: 0 auto;
+  padding: 90px 70px 100px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BOOKING HEADING
+   ========================================================= */
+
+.booking-heading {
+  max-width: 850px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.booking-heading h1 {
+  margin: 0 0 15px;
+
+  color: black;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 4rem;
+  line-height: 1.05;
+  letter-spacing: 1px;
+}
+
+.booking-heading p {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   GOOGLE CALENDAR
+   ========================================================= */
+
+.calendar-section {
+  width: 100%;
+}
+
+.calendar-container {
+  width: 100%;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  background-color: #FFF5EB;
+
+  border: 3px solid white;
+  border-radius: 8px;
+}
+
+.calendar-container iframe {
+  display: block;
+
+  width: 100%;
+  height: 700px;
+
+  border: 0;
+}
+
+
+/* =========================================================
+   BOOKING FORM SECTION
+   ========================================================= */
+
+.booking-form-section {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 100px auto 0;
+  padding: 70px;
+
+  box-sizing: border-box;
+
+  background-color: #5AD7F8;
+
+  border: 3px solid white;
+  border-radius: 12px;
+}
+
+
+/* =========================================================
+   BOOKING FORM HEADING
+   ========================================================= */
+
+.booking-form-heading {
+  max-width: 700px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+.booking-form-heading h2 {
+  margin: 0 0 15px;
+
+  color: black;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+.booking-form-heading p {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   FORM GRID
+   ========================================================= */
+
+.booking-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+
+/* =========================================================
+   FORM GROUP
+   ========================================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+
+/* =========================================================
+   FORM LABELS
+   ========================================================= */
+
+.form-group label {
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   FORM INPUTS
+   ========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  box-sizing: border-box;
+
+  background-color: #FFF5EB;
+  color: black;
+
+  border: 2px solid white;
+  border-radius: 6px;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+
+  outline: none;
+
+  transition: 0.25s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #FF009D;
+
+  box-shadow: 0 0 0 3px rgba(255, 0, 157, 0.2);
+}
+
+
+/* =========================================================
+   FORM TEXTAREA
+   ========================================================= */
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+
+/* =========================================================
+   FORM SUBMIT BUTTON
+   ========================================================= */
+
+.form-submit {
+  grid-column: 1 / -1;
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: 10px;
+}
+
+.form-submit button {
+  padding: 15px 35px;
+
+  background-color: #FF009D;
+  color: white;
+
+  border: 3px solid white;
+  border-radius: 8px;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.form-submit button:hover {
+  background-color: #FFF5EB;
+  color: black;
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   PACKAGE CHECKBOX OPTIONS
+   ========================================================= */
+
+.package-question {
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.1rem;
+}
+
+.package-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+
+  width: 100%;
+}
+
+.package-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 16px;
+
+  box-sizing: border-box;
+
+  background-color: #FFF5EB;
+  color: black;
+
+  border: 2px solid white;
+  border-radius: 6px;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.package-option input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+
+  margin: 0;
+
+  flex-shrink: 0;
+
+  accent-color: #FF009D;
+
+  cursor: pointer;
+}
+
+.package-option:hover {
+  border-color: #FF009D;
+  transform: translateY(-2px);
+}
+
+.package-option:has(input[type="checkbox"]:checked) {
+  background-color: #FFF5EB;
+  border-color: #FF009D;
+}
+
+
+/* =========================================================
+   CONTACT PAGE
+   ========================================================= */
+
+.contact-page {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+  padding: 80px 60px 100px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTACT LOCATION
+   ========================================================= */
+
+.contact-location {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.building-image {
+  display: block;
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  border: 3px solid white;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+}
+
+.contact-address {
+  margin: 25px 0 0;
+
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   CONTACT DETAILS
+   ========================================================= */
+
+.contact-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 70px;
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   CONTACT INFORMATION
+   ========================================================= */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 35px;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background-color: #5AD7F8;
+
+  border: 3px solid white;
+  border-radius: 8px;
+}
+
+.contact-item {
+  text-align: center;
+}
+
+.contact-item h2 {
+  margin: 0 0 10px;
+
+  color: black;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 2.3rem;
+  line-height: 1.1;
+}
+
+.contact-item a {
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.1rem;
+
+  text-decoration: none;
+
+  overflow-wrap: anywhere;
+
+  transition: 0.3s ease;
+}
+
+.contact-item a:hover {
+  color: #FF009D;
+}
+
+
+/* =========================================================
+   SOCIAL MEDIA BUTTONS
+   ========================================================= */
+
+.contact-socials {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+
+  align-content: center;
+}
+
+.contact-social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  width: 100%;
+
+  padding: 18px 25px;
+
+  box-sizing: border-box;
+
+  background-color: #5AD7F8;
+  color: black;
+
+  border: 3px solid white;
+  border-radius: 8px;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.3rem;
+
+  text-align: center;
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.contact-social-button:hover {
+  background-color: #FF009D;
+  color: white;
+
+  transform: translateY(-3px);
+}
+
+.contact-social-button img {
+  width: 28px;
+  height: 28px;
+
+  flex-shrink: 0;
+
+  object-fit: contain;
+}
+
+.contact-social-button span {
+  display: inline-block;
+}
+
+
+/* =========================================================
+   MENU FLAVOR / ITEM CARDS
+   ========================================================= */
+
+.menu-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  width: 100%;
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+.menu-flavor-card {
+  position: relative;
+
+  width: 100%;
+  min-height: 75px;
+
+  padding: 25px 20px 20px;
+
+  box-sizing: border-box;
+
+  background-color: white;
+
+  border: 3px solid white;
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  transition: 0.3s ease;
+}
+
+.menu-card-strip {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 10px;
+
+  background-color: #FF009D;
+}
+
+.menu-flavor-card h3 {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.menu-flavor-card p {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.menu-flavor-card:hover {
+  transform: translateY(-3px);
+  border-color: #FF009D;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  background-color: #5AD7F8;
+  color: black;
+
+  border-top: 2px solid white;
+
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+/* =========================================================
+   FOOTER CONTENT
+   ========================================================= */
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+
+  padding: 40px 50px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FOOTER BRAND
+   ========================================================= */
+
+.footer-brand {
+  flex: 1;
+}
+
+.footer-brand h2 {
+  margin: 0 0 8px;
+
+  color: black;
+
+  font-family: 'Warm', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.footer-brand p {
+  margin: 0;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   FOOTER LOGO
+   ========================================================= */
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 120px;
+  aspect-ratio: 1 / 1;
+
+  margin: 0 0 18px;
+
+  background-color: black;
+
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+
+.footer-logo img {
+  display: block;
+
+  width: 78%;
+  height: 78%;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   FOOTER CONTACT INFO
+   ========================================================= */
+
+.footer-info {
+  flex: 1;
+
+  color: black;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+.footer-info p {
+  margin: 4px 0;
+}
+
+
+/* =========================================================
+   FOOTER NAVIGATION
+   ========================================================= */
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 8px;
+
+  flex: 1;
+}
+
+.footer-nav a {
+  padding: 4px 0;
+
+  background-color: transparent;
+  color: black;
+
+  border-radius: 0;
+
+  font-family: 'Quicksand Bold', sans-serif;
+  font-size: 19px;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.footer-nav a:hover {
+  background-color: transparent;
+  color: black;
+
+  transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   FOOTER COPYRIGHT
+   ========================================================= */
+
+.footer-bottom {
+  width: 100%;
+
+  padding: 12px 20px;
+
+  box-sizing: border-box;
+
+  background-color: #5AD7F8;
+
+  border-top: 2px solid white;
+
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+
+  color: black;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .specialty-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .specialty-card:last-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    max-width: 500px;
+
+    justify-self: center;
+  }
+
+  .menu-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+/* -------------------------------------------------------
+   HERO
+   ------------------------------------------------------- */
+
+.hero-header {
+  min-height: 250px;
+
+  background-image: url('images/headermobile.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  height: 250px;
+}
+
+
+
+  /* -------------------------------------------------------
+     NAVBAR
+     ------------------------------------------------------- */
+
+  .navbar {
+    position: sticky;
+
+    padding: 10px 20px;
+  }
+
+  .nav-address {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-toggle:checked ~ .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 100%;
+
+    padding: 15px 0;
+
+    box-sizing: border-box;
+
+    background-color: #5AD7F8;
+  }
+
+  .nav-links li:not(:last-child)::after {
+    display: none;
+  }
+
+  .nav-links a {
+    display: block;
+
+    margin: 0 20px;
+
+    text-align: center;
+  }
+
+
+  /* -------------------------------------------------------
+     MAIN LOGO
+     ------------------------------------------------------- */
+
+  main .main-logo {
+    position: static;
+
+    width: 140px;
+    height: 140px;
+
+    margin: 20px auto 0;
+  }
+
+
+  /* -------------------------------------------------------
+     FEATURED TREATS
+     ------------------------------------------------------- */
+
+  .featured-section {
+    padding: 55px 25px 60px;
+  }
+
+  .featured-heading {
+    margin-bottom: 35px;
+  }
+
+  .featured-heading h2 {
+    font-size: 2.5rem;
+  }
+
+  .featured-heading p {
+    font-size: 1rem;
+  }
+
+  .featured-treats {
+    grid-template-columns: 1fr;
+    gap: 35px;
+
+    max-width: 500px;
+  }
+
+  .treat-info {
+    padding-top: 12px;
+  }
+
+
+  /* -------------------------------------------------------
+     INTRODUCTION
+     ------------------------------------------------------- */
+
+  .intro-section {
+    flex-direction: column;
+    gap: 35px;
+
+    padding: 40px 20px;
+  }
+
+  .intro-image {
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .intro-content {
+    width: 100%;
+    max-width: 550px;
+
+    text-align: center;
+  }
+
+  .intro-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .intro-content p {
+    font-size: 1.1rem;
+  }
+
+
+  /* -------------------------------------------------------
+     CATERING SECTION
+     ------------------------------------------------------- */
+
+  .catering-section .intro-content {
+    order: 2;
+  }
+
+  .catering-section .intro-image {
+    order: 1;
+  }
+
+
+  /* -------------------------------------------------------
+     MENU PAGE
+     ------------------------------------------------------- */
+
+  .menu-page {
+    flex-direction: column;
+    gap: 35px;
+
+    padding: 50px 20px;
+  }
+
+  .menu-sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 500;
+
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 6px;
+  }
+
+  .menu-sidebar h2 {
+    display: none;
+  }
+
+  .menu-category-nav {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+
+    overflow-x: auto;
+  }
+
+  .menu-category-nav a {
+    flex-shrink: 0;
+
+    padding: 8px 10px;
+
+    font-size: 14px;
+
+    text-align: center;
+  }
+
+  .menu-section {
+    padding-bottom: 60px;
+
+    scroll-margin-top: 80px;
+  }
+
+  .menu-section:not(:first-child) {
+    padding-top: 50px;
+  }
+
+  .menu-section-heading {
+    margin-bottom: 30px;
+  }
+
+  .menu-section-heading h1,
+  .menu-section-heading h2 {
+    font-size: 2.5rem;
+  }
+
+  .menu-section-heading p {
+    font-size: 1rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+  }
+
+
+  /* -------------------------------------------------------
+     CATERING PACKAGES
+     ------------------------------------------------------- */
+
+  .catering-packages {
+    padding: 55px 25px 70px;
+  }
+
+  .catering-heading {
+    margin-bottom: 40px;
+  }
+
+  .catering-heading h1 {
+    font-size: 2.7rem;
+  }
+
+  .catering-heading p {
+    font-size: 1rem;
+  }
+
+  .package-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+  }
+
+  .package-content h2 {
+    font-size: 1.8rem;
+  }
+
+
+  /* -------------------------------------------------------
+     SPECIALTY PACKAGES
+     ------------------------------------------------------- */
+
+  .specialty-packages {
+    padding: 60px 20px;
+  }
+
+  .specialty-heading {
+    margin-bottom: 35px;
+  }
+
+  .specialty-heading h2 {
+    font-size: 2.3rem;
+  }
+
+  .specialty-heading p {
+    font-size: 1rem;
+  }
+
+  .specialty-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .specialty-card:last-child {
+    grid-column: auto;
+
+    max-width: none;
+  }
+
+  .specialty-content h3 {
+    font-size: 1.7rem;
+  }
+
+
+  /* -------------------------------------------------------
+     PACKAGE BUNDLES
+     ------------------------------------------------------- */
+
+  .package-bundles {
+    padding: 10px 20px 70px;
+  }
+
+  .bundle-heading {
+    margin-bottom: 30px;
+  }
+
+  .bundle-heading h2 {
+    font-size: 2.3rem;
+  }
+
+  .bundle-heading p {
+    font-size: 1rem;
+  }
+
+  .bundle-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+
+    max-width: 500px;
+
+    margin: 0 auto;
+  }
+
+  .bundle-card {
+    padding: 18px;
+  }
+
+  .bundle-title-row h3 {
+    font-size: 1.15rem;
+  }
+
+  .bundle-price {
+    font-size: 1.05rem;
+  }
+
+  .bundle-card p {
+    font-size: 0.9rem;
+  }
+
+
+  /* -------------------------------------------------------
+     BOOKING PAGE
+     ------------------------------------------------------- */
+
+  .booking-page {
+    padding: 55px 20px 70px;
+  }
+
+  .booking-heading {
+    margin-bottom: 40px;
+  }
+
+  .booking-heading h1 {
+    font-size: 2.7rem;
+  }
+
+  .booking-heading p {
+    font-size: 1rem;
+  }
+
+  .calendar-container {
+    padding: 8px;
+  }
+
+  .calendar-container iframe {
+    height: 600px;
+  }
+
+
+  /* -------------------------------------------------------
+     BOOKING FORM
+     ------------------------------------------------------- */
+
+  .booking-form-section {
+    margin-top: 70px;
+
+    padding: 45px 20px;
+  }
+
+  .booking-form-heading h2 {
+    font-size: 2.5rem;
+  }
+
+  .booking-form-heading p {
+    font-size: 1rem;
+  }
+
+  .booking-form {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .form-group.full-width {
+    grid-column: auto;
+  }
+
+  .form-submit {
+    grid-column: auto;
+  }
+
+  .form-submit button {
+    width: 100%;
+  }
+
+  .package-options {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* -------------------------------------------------------
+     CONTACT PAGE
+     ------------------------------------------------------- */
+
+  .contact-page {
+    padding: 55px 20px 70px;
+  }
+
+  .contact-location {
+    margin-bottom: 50px;
+  }
+
+  .contact-address {
+    margin-top: 20px;
+
+    font-size: 1.05rem;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contact-info {
+    padding: 35px 20px;
+    gap: 30px;
+  }
+
+  .contact-item h2 {
+    font-size: 2rem;
+  }
+
+  .contact-item a {
+    font-size: 1rem;
+  }
+
+  .contact-social-button {
+    padding: 16px 20px;
+
+    font-size: 1.15rem;
+  }
+
+
+  /* -------------------------------------------------------
+     MENU CARDS
+     ------------------------------------------------------- */
+
+  .menu-card-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+
+    max-width: 500px;
+  }
+
+  .menu-flavor-card {
+    min-height: 65px;
+
+    padding: 22px 20px 18px;
+  }
+
+  .menu-card-strip {
+    height: 8px;
+  }
+
+  .menu-flavor-card h3 {
+    font-size: 1.1rem;
+  }
+
+
+  /* -------------------------------------------------------
+     FOOTER
+     ------------------------------------------------------- */
+
+  .footer-content {
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 35px 20px;
+
+    gap: 25px;
+
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-info,
+  .footer-nav {
+    width: 100%;
+    flex: none;
+  }
+
+  .footer-logo {
+    width: 110px;
+
+    margin: 0 auto 18px;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.7rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.95rem;
+  }
+
+  .footer-info {
+    font-size: 0.95rem;
+  }
+
+  .footer-nav {
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .footer-nav a {
+    font-size: 16px;
+  }
+
+
+  /* -------------------------------------------------------
+     COPYRIGHT
+     ------------------------------------------------------- */
+
+  .footer-bottom {
+    padding: 12px 15px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+}
+
